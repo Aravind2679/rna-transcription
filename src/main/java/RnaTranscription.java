@@ -1,31 +1,31 @@
 class RnaTranscription {
 
     String transcribe(String dnaStrand) {
-        int total_length = dnaStrand.length();
-        String transcribed_RNA = "";
-        for(int current_index=0;current_index<total_length;current_index++)
+        int dnaStrandLength = dnaStrand.length();
+        String transcribedRNA = "";
+        for(int currentDnaNucleotides =0;currentDnaNucleotides<dnaStrandLength;currentDnaNucleotides++)
         {
-                char currentdnaStrand=dnaStrand.charAt(current_index);
-                switch(currentdnaStrand)
+                char currentDnaModule=dnaStrand.charAt(currentDnaNucleotides);
+                switch(currentDnaModule)
                 {
                     case 'G':
-                        transcribed_RNA+='C';
+                        transcribedRNA+='C';
                         break;
                     case 'C':
-                        transcribed_RNA+='G';
+                        transcribedRNA+='G';
                         break;
                     case 'T':
-                        transcribed_RNA+='A';
+                        transcribedRNA+='A';
                         break;
                     case 'A':
-                        transcribed_RNA+='U';
+                        transcribedRNA+='U';
                         break;
                     default:
                          return "";
                         
                 }
         }
-        return transcribed_RNA;
+        return transcribedRNA;
     }
 
 }
